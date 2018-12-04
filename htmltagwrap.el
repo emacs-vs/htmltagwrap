@@ -8,7 +8,7 @@
 ;; Keyword: keybindings
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4"))
-;; URL: https://github.com/jcs090218/auto-rename-tag
+;; URL: https://github.com/jcs090218/htmltagwrap
 
 ;; This file is NOT part of GNU Emacs.
 
