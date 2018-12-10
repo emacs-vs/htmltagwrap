@@ -13,6 +13,16 @@ default tag to something else you want.
 (setq htmltagwrap-tag "p")
 ```
 
+Ident the region after wrapping.
+```
+(setq htmltagwrap-indent-region-after-wrap t)
+```
+
+Make newline when wrap if the region is not on the same line.
+```
+(setq htmltagwrap-indie-tag-wrap-not-inline t)
+```
+
 
 ## Key Bindings ##
 This plugin does not have a default keybindings, just simply binds
