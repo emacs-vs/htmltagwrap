@@ -35,19 +35,55 @@
 (defvar htmltagwrap-tag "p"
   "The default HTML tag to insert.")
 
+(defvar htmltagwrap-indie-tag-wrap-not-inline t
+  "Make newline when wrap if the region is not on the same line.")
+
+(defvar htmltagwrap-indent-region-after-wrap t
+  "Indent region after do html tag wrap.")
+
 
 (defun htmltagwrap-safe-do-tag-wrap ()
   "Check if able to do tag wrap."
   ;; NOTE(jenchieh): Rules design here..
   (and (use-region-p)))
 
-(defun htmltagwrap-insert-open-tag ()
-  "Insert the opening tag."
-  (insert (concat "<" htmltagwrap-tag ">")))
+(defun htmltagwrap-insert-open-tag (&optional nl)
+  "Insert the opening tag.
+NL : make new line when insert?"
+  (let ((empty-line (not (htmltagwrap-current-line-empty-p))))
+    (insert (concat "<" htmltagwrap-tag ">"))
+    (when (and nl
+               htmltagwrap-indie-tag-wrap-not-inline
+               empty-line)
+      (save-excursion
+        (newline-and-indent)))))
 
-(defun htmltagwrap-insert-close-tag ()
-  "Insert the closing tag."
+(defun htmltagwrap-insert-close-tag (&optional nl)
+  "Insert the closing tag.
+NL : make new line when insert?"
+  (when (and nl
+             htmltagwrap-indie-tag-wrap-not-inline
+             (not (htmltagwrap-current-line-empty-p)))
+    (newline-and-indent))
+  (when htmltagwrap-indent-region-after-wrap
+    (call-interactively #'indent-for-tab-command))
   (insert (concat "</" htmltagwrap-tag ">")))
+
+(defun htmltagwrap-get-line-interger ()
+  "Get the current line as integer."
+  (string-to-number (format-mode-line "%l")))
+
+(defun htmltagwrap-get-line-at-point (pt)
+  "Get the line number at PT."
+  (save-excursion
+    (goto-char pt)
+    (htmltagwrap-get-line-interger)))
+
+(defun htmltagwrap-current-line-empty-p ()
+  "Current line empty, but accept spaces/tabs in there."
+  (save-excursion
+    (beginning-of-line)
+    (looking-at "[[:space:]\t]*$")))
 
 
 ;;;###autoload
@@ -56,12 +92,26 @@
   (interactive)
   (when (htmltagwrap-safe-do-tag-wrap)
     (let ((re (region-end))
-          (rb (region-beginning)))
+          (rb (region-beginning))
+          (same-line nil))
+      ;; Check same line.
+      (when (= (htmltagwrap-get-line-at-point re) (htmltagwrap-get-line-at-point rb))
+        (setq same-line t))
+
+      ;; Insert osing tag.
       (goto-char re)
-      (htmltagwrap-insert-close-tag)
+      (htmltagwrap-insert-close-tag (not same-line))
+
+      ;; Insert opening tag.
       (goto-char rb)
-      (htmltagwrap-insert-open-tag)
-      (backward-char 1))))
+      (htmltagwrap-insert-open-tag (not same-line))
+
+      ;; Back to opening tag position.
+      (backward-char 1)
+
+      ;; Do indent region?
+      (when htmltagwrap-indent-region-after-wrap
+        (indent-region rb re)))))
 
 (provide 'htmltagwrap)
 ;;; htmltagwrap.el ends here
