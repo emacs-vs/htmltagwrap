@@ -32,14 +32,28 @@
 
 ;;; Code:
 
-(defvar htmltagwrap-tag "p"
-  "The default HTML tag to insert.")
 
-(defvar htmltagwrap-indie-tag-wrap-not-inline t
-  "Make newline when wrap if the region is not on the same line.")
+(defgroup htmltagwrap nil
+  "Wraps a chunk of HTML code in tags."
+  :prefix "htmltagwrap-"
+  :group 'editing
+  :link '(url-link :tag "Repository" "https://github.com/jcs090218/htmltagwrap"))
 
-(defvar htmltagwrap-indent-region-after-wrap t
-  "Indent region after do html tag wrap.")
+
+(defcustom htmltagwrap-tag "p"
+  "The default HTML tag to insert."
+  :group 'htmltagwrap
+  :type 'string)
+
+(defcustom htmltagwrap-indie-tag-wrap-not-inline t
+  "Make newline when wrap if the region is not on the same line."
+  :group 'htmltagwrap
+  :type 'boolean)
+
+(defcustom htmltagwrap-indent-region-after-wrap t
+  "Indent region after do html tag wrap."
+  :group 'htmltagwrap
+  :type 'boolean)
 
 
 (defun htmltagwrap-safe-do-tag-wrap ()
