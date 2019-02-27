@@ -5,23 +5,23 @@
 
 # htmltagwrap #
 
-Wraps a chunk of HTML code in tags.<br/><br/>
+Wraps a chunk of HTML code in tags.
 
 
 ## Configurations ##
 The default tag is `p`, by setting `htmltagwrap-tag` you can change the
 default tag to something else you want.
-```
+```el
 (setq htmltagwrap-tag "p")
 ```
 
 Ident the region after wrapping.
-```
+```el
 (setq htmltagwrap-indent-region-after-wrap t)
 ```
 
 Make newline when wrap if the region is not on the same line.
-```
+```el
 (setq htmltagwrap-indie-tag-wrap-not-inline t)
 ```
 
@@ -29,7 +29,7 @@ Make newline when wrap if the region is not on the same line.
 ## Key Bindings ##
 This plugin does not have a default keybindings, just simply binds
 `htmltagwrap-tag-wrap` function to the keymap you want.
-```
+```el
 (define-key global-map (kbd "M-w") #htmltagwrap-tag-wrap)
 ```
 
