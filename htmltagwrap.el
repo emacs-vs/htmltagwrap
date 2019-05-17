@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Wraps a chunk of HTML code in tags.
 ;; Keyword: keybindings
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs090218/htmltagwrap
 
