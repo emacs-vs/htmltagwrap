@@ -3,12 +3,15 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 
-# htmltagwrap #
+# htmltagwrap
+> Wraps a chunk of HTML code in tags.
 
-Wraps a chunk of HTML code in tags.
+<p align="center">
+  <img src="./screenshot/htmltagwrap-demo.gif" width="600" height="203"/>
+</p>
 
 
-## Configurations ##
+## Configurations
 The default tag is `p`, by setting `htmltagwrap-tag` you can change the
 default tag to something else you want.
 ```el
@@ -26,7 +29,7 @@ Make newline when wrap if the region is not on the same line.
 ```
 
 
-## Key Bindings ##
+## Key Bindings
 This plugin does not have a default keybindings, just simply binds
 `htmltagwrap-tag-wrap` function to the keymap you want.
 ```el
@@ -34,11 +37,7 @@ This plugin does not have a default keybindings, just simply binds
 ```
 
 
-## Screenshot ##
-<img src="./screenshot/htmltagwrap-demo.gif" width="600" height="203"/>
-
-
-## Contribution ##
+## Contribution
 If you would like to contribute to this project, you may either 
 clone and make pull requests to this repository. Or you can 
 clone the project and establish your own branch of this tool. 
