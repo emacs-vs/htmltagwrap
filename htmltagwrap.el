@@ -32,13 +32,11 @@
 
 ;;; Code:
 
-
 (defgroup htmltagwrap nil
   "Wraps a chunk of HTML code in tags."
   :prefix "htmltagwrap-"
   :group 'editing
   :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/htmltagwrap"))
-
 
 (defcustom htmltagwrap-tag "p"
   "The default HTML tag to insert."
@@ -54,7 +52,6 @@
   "Indent region after do html tag wrap."
   :group 'htmltagwrap
   :type 'boolean)
-
 
 (defun htmltagwrap-safe-do-tag-wrap ()
   "Check if able to do tag wrap."
@@ -99,20 +96,17 @@ NL : make new line when insert?"
     (beginning-of-line)
     (looking-at "[[:space:]\t]*$")))
 
-
 ;;;###autoload
 (defun htmltagwrap-tag-wrap ()
   "Wraps a chunk of HTML code in tags."
   (interactive)
   (when (htmltagwrap-safe-do-tag-wrap)
-    (let ((re (region-end))
-          (rb (region-beginning))
-          (same-line nil))
+    (let ((re (region-end)) (rb (region-beginning)) same-line)
       ;; Check same line.
       (when (= (htmltagwrap-get-line-at-point re) (htmltagwrap-get-line-at-point rb))
         (setq same-line t))
 
-      ;; Insert osing tag.
+      ;; Insert closing tag.
       (goto-char re)
       (htmltagwrap-insert-close-tag (not same-line))
 
