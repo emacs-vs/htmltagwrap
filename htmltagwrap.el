@@ -8,7 +8,7 @@
 ;; Keyword: keybindings
 ;; Version: 0.0.2
 ;; Package-Requires: ((emacs "24.4"))
-;; URL: https://github.com/jcs090218/htmltagwrap
+;; URL: https://github.com/jcs-elpa/htmltagwrap
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -37,7 +37,7 @@
   "Wraps a chunk of HTML code in tags."
   :prefix "htmltagwrap-"
   :group 'editing
-  :link '(url-link :tag "Repository" "https://github.com/jcs090218/htmltagwrap"))
+  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/htmltagwrap"))
 
 
 (defcustom htmltagwrap-tag "p"
