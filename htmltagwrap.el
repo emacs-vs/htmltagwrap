@@ -1,4 +1,4 @@
-;;; htmltagwrap.el --- Wraps a chunk of HTML code in tags.  -*- lexical-binding: t; -*-
+;;; htmltagwrap.el --- Wraps a chunk of HTML code in tags  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018  Shen, Jen-Chieh
 ;; Created date 2018-12-04 16:09:31
