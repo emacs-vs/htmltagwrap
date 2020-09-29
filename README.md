@@ -8,7 +8,7 @@
 > Wraps a chunk of HTML code in tags.
 
 <p align="center">
-  <img src="./screenshot/htmltagwrap-demo.gif" width="600" height="203"/>
+  <img src="./etc/htmltagwrap-demo.gif" width="600" height="203"/>
 </p>
 
 
