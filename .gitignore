@@ -2,7 +2,6 @@
 /.git
 /recipes
 /test
-htmltagwrap-pkg.el
 
 # ignore generated files.
 *.elc
