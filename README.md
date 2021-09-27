@@ -1,10 +1,11 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![MELPA](https://melpa.org/packages/htmltagwrap-badge.svg)](https://melpa.org/#/htmltagwrap)
 [![MELPA Stable](https://stable.melpa.org/packages/htmltagwrap-badge.svg)](https://stable.melpa.org/#/htmltagwrap)
-[![CI](https://github.com/jcs-elpa/htmltagwrap/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/htmltagwrap/actions/workflows/test.yml)
 
 # htmltagwrap
 > Wraps a chunk of HTML code in tags.
+
+[![CI](https://github.com/jcs-elpa/htmltagwrap/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/htmltagwrap/actions/workflows/test.yml)
 
 <p align="center">
   <img src="./etc/htmltagwrap-demo.gif" width="600" height="203"/>
