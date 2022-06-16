@@ -4,11 +4,10 @@
 ;; Created date 2018-12-04 16:09:31
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; Description: Wraps a chunk of HTML code in tags.
-;; Keyword: keybindings
+;; URL: https://github.com/jcs-elpa/htmltagwrap
 ;; Version: 0.0.3
 ;; Package-Requires: ((emacs "24.4"))
-;; URL: https://github.com/jcs-elpa/htmltagwrap
+;; Keyword: keybindings
 
 ;; This file is NOT part of GNU Emacs.
 
