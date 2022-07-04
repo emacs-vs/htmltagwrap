@@ -7,7 +7,7 @@
 ;; URL: https://github.com/jcs-elpa/htmltagwrap
 ;; Version: 0.0.3
 ;; Package-Requires: ((emacs "24.4"))
-;; Keyword: keybindings
+;; Keyword: convenience keybindings
 
 ;; This file is NOT part of GNU Emacs.
 
