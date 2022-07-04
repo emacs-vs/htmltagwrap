@@ -3,7 +3,7 @@
 		 "Wraps a chunk of HTML code in tags")
 
 (website-url "https://github.com/jcs-elpa/htmltagwrap")
-(keywords "keybindings")
+(keywords "convenience" "keybindings")
 
 (package-file "htmltagwrap.el")
 
