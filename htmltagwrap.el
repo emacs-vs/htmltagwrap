@@ -4,7 +4,7 @@
 ;; Created date 2018-12-04 16:09:31
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; URL: https://github.com/jcs-elpa/htmltagwrap
+;; URL: https://github.com/emacs-vs/htmltagwrap
 ;; Version: 0.0.3
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keyword: convenience keybindings
@@ -35,7 +35,7 @@
   "Wraps a chunk of HTML code in tags."
   :prefix "htmltagwrap-"
   :group 'editing
-  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/htmltagwrap"))
+  :link '(url-link :tag "Repository" "https://github.com/emacs-vs/htmltagwrap"))
 
 (defcustom htmltagwrap-tag "p"
   "The default HTML tag to insert."

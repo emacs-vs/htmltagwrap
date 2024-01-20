@@ -5,7 +5,7 @@
 # htmltagwrap
 > Wraps a chunk of HTML code in tags.
 
-[![CI](https://github.com/jcs-elpa/htmltagwrap/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/htmltagwrap/actions/workflows/test.yml)
+[![CI](https://github.com/emacs-vs/htmltagwrap/actions/workflows/test.yml/badge.svg)](https://github.com/emacs-vs/htmltagwrap/actions/workflows/test.yml)
 
 <p align="center">
   <img src="./etc/htmltagwrap-demo.gif" width="600" height="203"/>

@@ -2,7 +2,7 @@
          "0.0.3"
 		 "Wraps a chunk of HTML code in tags")
 
-(website-url "https://github.com/jcs-elpa/htmltagwrap")
+(website-url "https://github.com/emacs-vs/htmltagwrap")
 (keywords "convenience" "keybindings")
 
 (package-file "htmltagwrap.el")
