@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "htmltagwrap"
          "0.0.3"
 		 "Wraps a chunk of HTML code in tags")
